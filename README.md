@@ -57,7 +57,7 @@ This image is built from the official Node.js image at https://hub.docker.com/_/
 Your Dockerfile won't need to have an ENTRYPOINT or CMD line as Bitbucket Pipelines will run the script commands that you put in your bitbucket-pipelines.yml file instead.
 
 ```
-FROM node:4.6
+FROM node:6.9.4
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 \
   && echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.2 main" | tee /etc/apt/sources.list.d/mongodb-org-3.2.list \
   && apt-get update \
