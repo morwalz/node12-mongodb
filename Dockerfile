@@ -4,6 +4,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14
     apt-get update && \
     apt-get install -y --no-install-recommends apt-utils && \
     apt-get install -y mongodb-org-shell mongodb-org-server mongodb-org-mongos mongodb-org-tools mongodb-org && \
+    service mongod start && \
     apt-get install -y libssl-dev && \
     apt-get install -y ruby-full rubygems autogen autoconf libtool make && \
     npm install grunt -g && \
