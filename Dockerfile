@@ -6,7 +6,6 @@ RUN  apt-get update && apt-get install -y gnupg2 && \
     echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-3.4.list && \
     apt-get update && \
     apt-get install -y mongodb-org && \
-    service mongodb start && \
     apt-get install -y libssl-dev && \
     apt-get install -y ruby-full rubygems autogen autoconf libtool make && \
     npm install grunt -g && \
