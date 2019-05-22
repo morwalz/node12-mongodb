@@ -1,10 +1,9 @@
 FROM boldt/base-ubuntu-nvm-node-npm:0.0.6
 RUN echo node -v && \
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6 && \
-    echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" | tee /etc/apt/sources.list.d/mongodb-org-3.4.list && \
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6 && \
+    echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list && \
     apt-get update && \
-    apt-get install -y --no-install-recommends apt-utils && \
-    apt-get install -y mongodb-org-shell mongodb-org-server mongodb-org-mongos mongodb-org-tools mongodb-org mongodb-server && \
+    apt-get install -y mongodb-org && \
     service mongod start && \
     apt-get install -y libssl-dev && \
     apt-get install -y ruby-full rubygems autogen autoconf libtool make && \
