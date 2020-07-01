@@ -42,6 +42,7 @@ ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 RUN  apt-get update && apt-get install -y gnupg2 && \
      apt-get install -y --no-install-recommends apt-utils && \
      echo node -v && \
+     apt-get install gnupg && \
      wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | apt-key add - && \
     echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.2.list && \
     apt-get update && \
