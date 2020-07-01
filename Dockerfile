@@ -1,4 +1,4 @@
-FROM boldt/base-ubuntu-nvm-node-npm:0.0.6
+FROM node:12.18.2-alpine
 RUN  apt-get update && apt-get install -y gnupg2 && \
      apt-get install -y --no-install-recommends apt-utils && \
      echo node -v && \
