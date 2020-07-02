@@ -24,6 +24,7 @@ RUN rm /bin/sh && \
 
 ENV NVM_DIR /root/.nvm
 ENV NODE_VERSION 12.18.2
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update --fix-missing && \
 	apt-get install -y curl && \
