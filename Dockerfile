@@ -23,7 +23,7 @@ RUN rm /bin/sh && \
 ##############################################################################
 
 ENV NVM_DIR /root/.nvm
-ENV NODE_VERSION 13.10.1
+ENV NODE_VERSION 14.5.0
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update --fix-missing && \
